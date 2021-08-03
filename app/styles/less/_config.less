@@ -6,11 +6,13 @@
 @lineheight: 1.65; // Document Line Height
 @userfont: roboto-oh5, sans-serif; // User Font Family
 @systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+@button: #bc1339;
+@link: #8a2be2;
 
 // IMPORT SECTION
 
 @import '/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css'; // Bootstrap Reboot collection
-// @import '/node_modules/bootstrap/dist/css/bootstrap-grid.min.css'; // Optional Bootstrap Grid
+@import '/node_modules/bootstrap/dist/css/bootstrap-grid.min.css'; // Optional Bootstrap Grid
 
 // FONTS LOAD SECTION
 
@@ -45,6 +47,12 @@ input, textarea {
 	&:required:valid { border-color: green }
 }
 
+img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}
+
 body {
 	font-family: @userfont;
 	font-size: @fontsize;
@@ -53,4 +61,24 @@ body {
 	min-width: 320px;
 	position: relative;
 	overflow-x: hidden;
+}
+
+button {
+	width: 220px;
+	border: none;
+	background-color: @button;
+	transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 25px 0px rgb(123 147 171 / 15%);
+    line-height: 50px;
+    font-weight: 600;
+    padding: 0 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    &:hover {
+    	background-color: lighten(@button, 5%);
+    }
+}
+a {
+	text-decoration: none;
 }
