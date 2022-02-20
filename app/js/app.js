@@ -55,4 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+
+  let findAlphabet = document.querySelector('.title_font');
+
+  function fundElem (str) {
+    const el = ["а", "о", "д"]
+  }
+
+  console.log(findAlphabet)
+
 })
