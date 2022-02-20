@@ -12,26 +12,43 @@
 	}
 	.directions_item {
 		margin-bottom: 2rem;
-
 		.directions_box {
-		border: 15px solid #333;
-			padding: 25px;
+			padding: 35px;
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				z-index: 5;
+				border: 17px solid #333;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				pointer-events: none;
+			}
 			// background-image: url(../images/dist/brame/brame2_blue.png);
 			// background-clip: border-box;
 			// background-origin: border-box;
 			// background-repeat: no-repeat;
 			// background-size: 100% 100%;
-		}
-		.directions_image {
-			display: block;
-			width: 100%;
-			object-fit: cover;
-			// padding: 15px;
+			img:hover {
+				cursor: pointer;
+			}
 		}
 		.directions_name {
 			padding: 20px 25px;
 			text-align: center;
 			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 992px){
+	.directions_image {
+		// padding: 15px;
+		transition: all .4s ease;
+		&:hover {
+			transform: scale(1.17, 1.26);
 		}
 	}
 }
