@@ -34,9 +34,8 @@
 .menu_navi {
 	display: flex;
 	flex-direction: column;
-	margin-left: 24px;
+	padding-left: 24px;
 	margin-bottom: 0;
-	padding: 0;
 	min-height: 100px;
 }
 .menu_link {
@@ -47,41 +46,10 @@
 	&:last-child {
 		margin-bottom: 27px;
 	}
-	// Ховер не на ссылку, а на блок линка, из за чего шейпы появляются до наведения на ссылку
-	.menu_shape_circle {
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    border-radius: 50%;
-    top: -4px;
-    left: -6px;
-    z-index: 0;
-    background-color: transparent;
-    transition: all 0.3s ease;
-	}
-	.menu_shape_plus {
-		width: 2px;
-    height: 2px;
-    position: absolute;
-    border-radius: 50%;
-    top: -5px;
-    left: -7px;
-    z-index: 0;
-    background-color: transparent;
-    transition: all 0.3s ease;
-	}
-  &:hover .menu_shape_circle, &:hover .menu_shape_plus {
-		transform: scale(1.5, 1.5);
-		background-color: @redColor;
-  }
-  &:hover .menu_shape_plus {
-		transform: scale(1.5, 1.5);
-		background-color: @yellowColor;
-  }
 	a {
 		position: relative;
 		font-weight: 600;
-		padding: 1rem 0;
+		padding: 1rem 7px;
 		font-size: 20px;
 		&:before {
 	    content: '';
@@ -102,6 +70,34 @@
 		}
 	}
 }
+// .effect-2 {
+// 	&:before, &:after {
+// 	    content: '';
+// 	    position: absolute;
+// 	    transition: transform .5s ease;
+// 	  }
+//   padding: 10px;
+//   &:before, &:after {
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     border-style: solid;
+//     border-color: rgba(#333, .15);
+//   }
+//   &:before {
+//     border-width: 2px 0 2px 0;
+//     transform:  scaleX(0);
+//   }
+//   &:after {
+//     border-width: 0 2px 0 2px;
+//     transform:  scaleY(0);
+//   }
+//   &:hover:before, &:hover:after {
+//   	content: "";
+//     transform:  scale(1, 1);
+//   }
+// }
 .news {
 	padding-left: 24px;
 	padding-bottom: 2rem;
