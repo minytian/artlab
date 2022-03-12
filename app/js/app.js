@@ -8,30 +8,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	var slider = tns({
-    container: '.results_slider',
-    items: 2,
-    speed: 400,
-    mouseDrag: true,
-    slideBy: 'page',
-    navPosition: 'bottom',
-    controlsText: ["🠨", "🠪"],
-    responsive: {
-      640: {
-        edgePadding: 20,
-        gutter: 20,
-        items: 2,
-      },
-      700: {
-        gutter: 40
-      },
-      900: {
-        items: 2
-      }
-    }
-  });
-
-
   var slider = tns({
     container: '.review_slider',
     items: 2,
@@ -66,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
-baguetteBox.run('.gallery', {
+baguetteBox.run('.gallery_directions', {
+    captions: true
+});
+
+baguetteBox.run('.gallery_results', {
     captions: true
 });
