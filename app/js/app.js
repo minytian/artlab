@@ -6,6 +6,8 @@
 // // Import vendor jQuery plugin example (not module)
 // require('~/app/libs/mmenu/dist/mmenu.js')
 
+// tiny Slider
+
 document.addEventListener('DOMContentLoaded', () => {
 
   var slider = tns({
@@ -42,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+// Gallery
+
 baguetteBox.run('.gallery_directions', {
     captions: true
 });
@@ -49,3 +53,23 @@ baguetteBox.run('.gallery_directions', {
 baguetteBox.run('.gallery_results', {
     captions: true
 });
+
+// Modal window 
+
+let modalOverlay = document.querySelector(".modal-overlay");
+let modalContent = document.querySelector(".modal");
+let modalButton = document.querySelector(".menu_adress");
+let modalClose = document.querySelector(".close-modal");
+
+modalButton.addEventListener('click', modal_open)
+modalClose.addEventListener('click', modal_close)
+
+function modal_open () {
+  modalOverlay.classList.add("active")
+  modalContent.classList.add("active")
+}
+
+function modal_close (event) {
+  modalOverlay.classList.remove("active")
+  modalContent.classList.remove("active")
+}

@@ -1,0 +1,110 @@
+/**
+ * Overlay
+ * -- only show for tablet and up
+ */
+
+@media only screen and (min-width: 992px) {
+  .modal_header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+  }
+  .modal_text {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 115;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible; } }
+/**
+ * Modal
+ */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 1199px;
+  max-width: 75rem;
+  min-height: 20rem;
+  padding: 3rem 1rem 1rem;
+  border-radius: 3px;
+  opacity: 0;
+  overflow-y: auto;
+  visibility: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  transform: scale(1.2);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1); }
+  .modal .close-modal {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 7px;
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: 0.3s; 
+  }
+    .modal .close-modal svg {
+      width: 2.5em;
+      height: 2.5em; 
+      transition: all 0.3s ease;
+      &:hover {
+        fill: @redColor !important;
+        // transition-duration : 0s;
+      }}
+  .modal .modal-content {
+    opacity: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: 0.3s; }
+  .modal.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1); }
+    .modal.active .modal-content {
+      opacity: 1; }
+    .modal.active .close-modal {
+      transform: translateY(10px);
+      opacity: 1; }
+
+/**
+ * Mobile styling
+ */
+@media only screen and (max-width: 991px) {
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0;
+    transform: scale(1.1);
+    padding: 0 !important; }
+
+  .close-modal {
+    right: 20px !important; } }
