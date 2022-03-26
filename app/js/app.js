@@ -12,22 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var slider = tns({
     container: '.review_slider',
-    items: 2,
     speed: 400,
     mouseDrag: true,
     slideBy: 'page',
     navPosition: 'bottom',
-    controlsText: ["🠨", "🠪"],
+    prevButton: '#tns_btn_prev',
+    nextButton: '#tns_btn_next',
+    controlsText: false,
     responsive: {
-      640: {
-        edgePadding: 20,
-        gutter: 20,
-        items: 2,
+      768: {
+        gutter: 30,
+        items: 1
       },
-      700: {
-        gutter: 40
+      860: {
+        edgePadding: 30
       },
-      900: {
+      1200: {
         items: 2
       }
     }
