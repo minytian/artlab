@@ -28,7 +28,20 @@
 		margin-bottom: 5px;
 		position: relative;
 		z-index: 1;
-		// transition: all 1.3s ease; не работает из за before
+		overflow: hidden;
+		transition: all 0.3s ease; // не работает из за before
+		&:before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 5px;
+			height: 45px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+			transition: all .3s ease;
+			// transform: translateY(-15px);
+			transform: scale(0.5);
+		}
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -50,70 +63,45 @@
 				background-color: rgba(@blueColor, .06);
 				border-radius: 4px;
 				&:before {
-					content: "";
-					display: inline-block;
-					position: absolute;
-					width: 5px;
-					height: 45px;
-					border-top-left-radius: 4px;
-					border-bottom-left-radius: 4px;
 					background-color: @blueColor;
+					// transform: translateY(0);
+					transform: scale(1);
 				}
 			}
 			&:nth-child(2) {
 				background-color: rgba(@redColor, .06);
 				border-radius: 4px;
 				&:before {
-					content: "";
-					display: inline-block;
-					position: absolute;
-					width: 5px;
-					height: 45px;
-					border-top-left-radius: 4px;
-					border-bottom-left-radius: 4px;
 					background-color: @redColor;
+					// transform: translateY(0);
+					transform: scale(1);
 				}
 			}
 			&:nth-child(3) {
 				background-color: rgba(@yellowColor, .06);
 				border-radius: 4px;
 				&:before {
-					content: "";
-					display: inline-block;
-					position: absolute;
-					width: 5px;
-					height: 45px;
-					border-top-left-radius: 4px;
-					border-bottom-left-radius: 4px;
 					background-color: @yellowColor;
+					// transform: translateY(0);
+					transform: scale(1);
 				}
 			}
 			&:nth-child(4) {
 				background-color: rgba(@purpleColor, .06);
 				border-radius: 4px;
 				&:before {
-					content: "";
-					display: inline-block;
-					position: absolute;
-					width: 5px;
-					height: 45px;
-					border-top-left-radius: 4px;
-					border-bottom-left-radius: 4px;
 					background-color: @purpleColor;
+					// transform: translateY(0);
+					transform: scale(1);
 				}
 			}
 			&:nth-child(5) {
 				background-color: rgba(@greenColor, .06);
 				border-radius: 4px;
 				&:before {
-					content: "";
-					display: inline-block;
-					position: absolute;
-					width: 5px;
-					height: 45px;
-					border-top-left-radius: 4px;
-					border-bottom-left-radius: 4px;
 					background-color: @greenColor;
+					// transform: translateY(0);
+					transform: scale(1);
 				}
 			}
 		}
