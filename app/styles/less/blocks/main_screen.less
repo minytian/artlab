@@ -29,7 +29,7 @@
 		position: relative;
 		z-index: 1;
 		overflow: hidden;
-		transition: all 0.3s ease; // не работает из за before
+		transition: all 0.3s ease;
 		&:before {
 			content: "";
 			display: inline-block;
@@ -153,23 +153,19 @@
 }
 
 .main_content {
-	background-image: url(../images/dist/background6.png);
-	background-clip: border-box;
-	background-origin: border-box;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	height: 100vh;
-}
-.main_content {
 	height: 100%;
 	.row {
 		align-items: center;
 		height: 100%;
+		z-index: 1;
+		position: relative;
 	}
 }
 .form_title {
 	text-align: center;
+	margin-left: 140px;
+	margin-right: 20px;
+	margin-bottom: 0;
 }
 .form_signup {
 	background: rgba(243, 243, 243, .4);
@@ -201,5 +197,113 @@
 	transition: all 0.3s ease;
 	&:hover {
 		fill: @redColor;
+	}
+}
+
+.main_content {
+	position: relative;
+	z-index: 1;
+	.decors {
+		position: absolute;
+		z-index: -1;
+	}
+	.shapes1 {
+		background-image: url(../images/dist/main_screen/shape_flask.png);
+		background-clip: border-box;
+		background-origin: border-box;
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-size: contain;
+		height: 81vh;
+		width: 100%;
+		left: -25px;
+	}
+	.shapes2 {
+		background-image: url(../images/dist/main_screen/shapes1.png);
+		background-clip: border-box;
+		background-origin: border-box;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		height: 200px;
+		width: 150px;
+		right: 0;
+	}
+	.shapes3 {
+		background-image: url(../images/dist/main_screen/shapes3.png);
+		background-clip: border-box;
+		background-origin: border-box;
+		background-repeat: no-repeat;
+		background-position: top top;
+		background-size: contain;
+		height: 250px;
+		width: 300px;
+		right: 13%;
+		bottom: -5%;
+	}
+	.shapes4 {
+		background-image: url(../images/dist/main_screen/shapes4.png);
+		background-clip: border-box;
+		background-origin: border-box;
+		background-repeat: no-repeat;
+		background-position: top top;
+		background-size: contain;
+		height: 150px;
+		width: 105px;
+		bottom: -10%;
+		right: 5%;
+		transform: rotate(-70deg);
+	}
+	.shapes5 {
+		height: 60px;
+		width: 60px;
+		background-color: @greenColor;
+		bottom: 0%;
+		left: 35%;
+		border-radius: 100%;
+		animation: animationOne 20s infinite linear;
+	}
+	.shapes6 {
+		height: 70px;
+		width: 70px;
+		background-color: @blueColor;
+		top: 5%;
+		left: 23%;
+		border-radius: 100%;
+		animation: animationOne 20s infinite linear;
+	}
+	.shapes7 {
+		height: 40px;
+		width: 40px;
+		background-color: @redColor;
+		// bottom: -5%;
+		// right: 53%;
+		right: 36%;
+		bottom: 58%;
+		border-radius: 100%;
+		animation: animationTwo 17s infinite linear;
+	}
+}
+
+@keyframes animationOne {
+	0% {
+	    transform: scale(1.3, 1.3);
+	}
+	50% {
+		transform: scale(1, 1);
+	}
+	100% {
+	    transform: scale(1.3, 1.3);
+	}
+}
+@keyframes animationTwo {
+	0% {
+	    transform: scale(1.4, 1.4);
+	}
+	50% {
+		transform: scale(1, 1);
+	}
+	100% {
+	    transform: scale(1.4, 1.4);
 	}
 }
