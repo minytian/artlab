@@ -14,8 +14,30 @@
 		margin-bottom: 16px;
 		position: relative;
 		overflow: hidden;
+		.arrow_fullscreen {
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			display: block;
+			z-index: 1;
+			top: 45%;
+			left: 50%;
+			transform: translate(-45%, -50%);
+			transition: opacity .2s ease 0s;
+			opacity: 0;
+			pointer-events: none;
+		}
 		&:hover {
 			cursor: pointer;
+			.arrow_fullscreen {
+				opacity: 1;
+				transition: opacity .2s ease .2s;
+			}
+		}
+		@media (max-width: 991px) {
+			.arrow_fullscreen {
+				display: none;
+			}
 		}
 		& .glow-wrap {
 			position: absolute;
@@ -57,5 +79,6 @@
 		pointer-events: none;
 	}
 }
+
 
 // Settings gallery in config.less
