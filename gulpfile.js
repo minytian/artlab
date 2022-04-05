@@ -24,11 +24,14 @@ function browsersync() {
 	browserSync.init({
 		server: {
 			baseDir: 'app/',
+			directory: true,
 			middleware: bssi({ baseDir: 'app/', ext: '.html' })
 		},
 		ghostMode: { clicks: false },
 		notify: false,
 		online: true,
+		startPath: '/',
+		reloadOnRestart: true,
 		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
 	})
 }
@@ -91,7 +94,7 @@ function buildcopy() {
 async function buildhtml() {
 	let includes = new ssi('app/', 'dist/', '/**/*.html')
 	includes.compile()
-	del('dist/parts', { force: true })
+	del(['dist/parts', 'dist/pages/parts'], { force: true })
 }
 
 function cleandist() {
