@@ -44,7 +44,6 @@
 				content: "";
 				position: absolute;
 				z-index: 5;
-				border: 17px solid #F1B800;
 				top: 0;
 				left: 0;
 				bottom: 0;
@@ -53,11 +52,24 @@
 				// background: rgb(241,184,0);
 				// background: linear-gradient(0deg, rgba(241,184,0,1) 0%, rgba(255,221,108,1) 100%);
 			}
-			// background-image: url(../images/dist/brame/brame2_blue.png);
-			// background-clip: border-box;
-			// background-origin: border-box;
-			// background-repeat: no-repeat;
-			// background-size: 100% 100%;
+		}
+		&:nth-child(1) .directions_box::before{
+			border: 17px solid @redColor;
+		}
+		&:nth-child(2) .directions_box::before{
+			border: 17px solid @blueColor;
+		}
+		&:nth-child(3) .directions_box::before{
+			border: 17px solid @yellowColor;
+		}
+		&:nth-child(5) .directions_box::before{
+			border: 17px solid @redColor;
+		}
+		&:nth-child(6) .directions_box::before{
+			border: 17px solid @blueColor;
+		}
+		&:nth-child(4) .directions_box::before{
+			border: 17px solid @yellowColor;
 		}
 		.directions_name {
 			padding: 20px 25px;
