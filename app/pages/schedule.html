@@ -10,8 +10,8 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<link rel="icon" href="../images/favicon.png">
-	<meta property="og:image" content="../images/dist/preview.jpg">
+	<link rel="icon" href="../images/dist/logo/favicon.png">
+	<meta property="og:image" content="../images/dist/open_graph/open_graph.jpg">
 	
 	<link rel="stylesheet" href="../css/main.min.css">
 
@@ -21,50 +21,52 @@
 <body>
 
 
-<!--#include virtual="parts_schedule/top_widget_schedule.html" -->
-<!--#include virtual="parts_schedule/menu_schedule.html" -->
+<!--#include virtual="top_widget_pages.html" -->
+<!--#include virtual="menu_pages.html" -->
 
 <div class="col-12 col-md-8 col-lg-10">
-<div class="row">
-	<div class="col-12 col-lg-12">
-		<div class="schedule_header">
-			<h1 class="schedule_title title_font">Расписание</h1>
-			<!-- <h4 class="directions_subtitle">Узнайте подробности про интересующее вас направление</h4> -->
+	<div class="schedule_wrap">
+		<div class="row">
+			<div class="col-12 col-lg-12">
+				<div class="schedule_header">
+					<h1 class="schedule_title title_font">Расписание</h1>
+					<!-- <h4 class="directions_subtitle">Узнайте подробности про интересующее вас направление</h4> -->
+				</div>
+			</div>
+			<div class="col-12 col-md-8 col-lg-12">
+				<div class="schedule_image">
+					<img src="../images/dist/schedule/schedule.png" alt="schedule">
+				</div>
+				<div class="schedule_description">
+					<p class="schedule_description_text text_font">
+						1. Групповые занятия для детей каждые понедельник, вторник, четверг, пятница, суббота, воскресение. <br>
+						2. Записываться на индивидуальные занятия заранее.<br>
+						3. Для взрослых лучше всего подойдут индивидуальные занятия.<br>
+						4. В конце каждого месяца проводится мастер-класс (он входит в стоимость абонемента).
+					</p>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="col-12 col-md-8 col-lg-12">
-		<div class="schedule_image">
-			<img src="../images/dist/schedule/schedule.png" alt="schedule">
-		</div>
-		<div class="schedule_description">
-			<p class="schedule_description_text text_font">
-				1. Групповые занятия для детей каждые понедельник, вторник, четверг, пятница, суббота, воскресение. <br>
-				2. Записываться на индивидуальные занятия заранее.<br>
-				3. Для взрослых лучше всего подойдут индивидуальные занятия.<br>
-				4. В конце каждого месяца проводится мастер-класс (он входит в стоимость абонемента).
-			</p>
-		</div>
-	</div>
-</div>
-<div class="row justify-content-center">
-	<div class="col-12 col-lg-5">
-			<h2 class="schedule_title title_font">Записаться на занятие</h2>
-	                <div class="form_signup">
-	                    <form action name="" method="POST" class="">
-	                        <input type="text" placeholder="Имя">
-	                        <input type="text" placeholder="Ваш телефон">
-	                        <button class="form_btn">
-	                        	<span class="text_btn">Записаться на занятие</span>
-	                        	<svg class="btn_svg2">
-									<use xlink:href="#btn_stroke2"></use>
-								</svg>
-	                        </button>
-	                    </form>
-	                </div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-5">
+					<h2 class="schedule_title title_font">Записаться на занятие</h2>
+			                <div class="form_signup">
+			                    <form action name="" method="POST" class="">
+			                        <input type="text" placeholder="Имя">
+			                        <input type="text" placeholder="Ваш телефон">
+			                        <button class="form_btn">
+			                        	<span class="text_btn">Записаться на занятие</span>
+			                        	<svg class="btn_svg2">
+											<use xlink:href="#btn_stroke2"></use>
+										</svg>
+			                        </button>
+			                    </form>
+			                </div>
+			            </div>
+			
+		            </div>
 	            </div>
-	
-	            </div>
-	            </div>
+            </div>
 </section>
 
 <!--#include virtual="../parts/footer.html" -->
