@@ -161,8 +161,12 @@
 	}
 }
 
-.main_screen_wrap, .main_content {
+.main_screen_wrap {
 	height: 100%;
+	margin: 0 3rem 0 0;
+	.main_content {
+		height: 100%;
+	}
 	.row {
 		align-items: center;
 		height: 100%;
@@ -218,16 +222,50 @@
 		position: absolute;
 		z-index: -1;
 	}
-	.shapes1 {
-		background-image: url(../images/dist/main_screen/shape_flask.png);
-		background-clip: border-box;
-		background-origin: border-box;
-		background-repeat: no-repeat;
-		background-position: top left;
-		background-size: contain;
+	.shape_flask {
+		display: inline-block;
+		width: 200px;
 		height: 81vh;
-		width: 100%;
-		left: -25px;
+		.flask {
+			background-image: url(../images/dist/main_screen/flask.png);
+			background-clip: border-box;
+			background-origin: border-box;
+			background-repeat: no-repeat;
+			background-position: top left;
+			background-size: contain;
+			height: 81vh;
+			width: 200px;
+			left: -48px;
+			top: 50px;
+		}
+		.flask_colors_yellow {
+			background: url(../images/dist/main_screen/flask_color_yellow.svg);
+		}
+		.flask_colors_red {
+			background: url(../images/dist/main_screen/flask_color_red.svg);
+		}
+		.flask_colors_blue {
+			background: url(../images/dist/main_screen/flask_color_blue.svg);
+		}
+		.flask_position {
+			background-clip: border-box;
+			background-origin: border-box;
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 186px;
+			width: 167px;
+			left: -48px;
+			bottom: 91px;
+		}
+		.flask_animated_yellow {
+			animation: flask_animation_yellow 20s infinite linear;
+		}
+		.flask_animated_red {
+			animation: flask_animation_red 20s infinite linear;
+		}
+		.flask_animated_blue {
+			animation: flask_animation_blue 20s infinite linear;
+		}
 	}
 	.shapes2 {
 		background-image: url(../images/dist/main_screen/shapes1.png);
@@ -307,5 +345,48 @@
 	}
 	100% {
 	    transform: scale(1.4, 1.4);
+	}
+}
+
+@keyframes flask_animation_yellow {
+	0% {
+	    	opacity: .5;
+	}
+	20% {
+	    	opacity: 1;
+	}
+	50% {
+			opacity: 0;
+	}
+	100% {
+	    	opacity: 1;
+	}
+}
+@keyframes flask_animation_red {
+	0% {
+	    	opacity: 0;
+	}
+	50% {
+			opacity: 1;
+	}
+	90% {
+	    	opacity: 0;
+	}
+}
+@keyframes flask_animation_blue {
+	0% {
+	    	opacity: 0;
+	}
+	50% {
+			opacity: 0;
+	}
+	70% {
+	    	opacity: 1;
+	}
+	90% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
