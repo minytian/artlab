@@ -136,25 +136,59 @@ ul.submenu_socials{
 	max-height: 80vh;
 }
 
+@media screen and (max-width: 991px) {
+	.top_widget {
+		height: auto;
+		min-height: auto;
+		border-bottom: 1px solid rgba(#333, .15);
+		padding: 0.5rem 0 1rem;
+		&:before {
+			content: none;
+		}
+		.row {
+			flex-direction: column;
+		}
+		.menu_logo {
+			justify-content: center;
+			margin: 0 0 1rem;
+			img {
+				height: 65px;
+			}
 
-// @keyframes shakeX {
-//   from,
-//   to {
-//     transform: translate3d(0, 0, 0);
-//   }
+		}
+		.menu_contacts {
+			flex-direction: column-reverse;
+			margin-right: 0;
+			height: auto;
+			.menu_phone a {
+				margin: 0;
+				.phone_number {
+					font-size: 12px;
+				}
+				.phone_svg {
+					width: 13px;
+					height: 17px;
+				}
+			}
+			.location_openModal {
+				.menu_adress  {
+							font-size: 12px;
+						}
+				.location_svg {
+					width: 13px;
+					height: 15px;
+				}
+			}
+		}
+		.menu_socials {
+			font-size: 12px;
+			ul.submenu_socials li img {
+				width: 20px;
+			}
+		}
 
-//   10%,
-//   30%,
-//   50%,
-//   70%,
-//   90% {
-//     transform: translate3d(-1px, 0, 0);
-//   }
-
-//   20%,
-//   40%,
-//   60%,
-//   80% {
-//     transform: translate3d(1px, 0, 0);
-//   }
-// }
+		.menu_socials, .menu_location, .menu_phone {
+			margin-bottom: 0.8rem;
+		}
+	}
+}

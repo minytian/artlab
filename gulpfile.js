@@ -32,6 +32,7 @@ function browsersync() {
 		online: true,
 		startPath: '/',
 		reloadOnRestart: true,
+		// tunnel: true
 		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
 	})
 }
