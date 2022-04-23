@@ -64,95 +64,19 @@
 				z-index: -1;
 				pointer-events: none;
 			}
-		}
-		&:nth-child(1) .directions_box, &:nth-child(6) .directions_box, &:nth-child(7) .directions_box {
+	
 			span.top {
-				top: 10px;
-				left: 8px;
-				border-top: 8px solid @yellowColor;
+				top: 9.07px;
+				left: 7.2px;
 				width: 20%;
-			}
-			span.left {
-				top: 17px;
-				left: 8px;
-				right: 0;
-				bottom: 0;
-				border-left: 8px solid @yellowColor;
 				height: 20%;
-				transform: rotateX(180deg);
-			}
-			span.right {
-				right: 8px;
-				bottom: 17px;
-				border-left: 8px solid @yellowColor;
-				height: 20%;
-				transform: rotateX(180deg);
 			}
 			span.bottom {
-				right: 8px;
+				right: 7px;
 				bottom: 10px;
-				border-bottom: 8px solid @yellowColor;
 				width: 20%;
-			}
-		}
-		&:nth-child(2) .directions_box, &:nth-child(4) .directions_box, &:nth-child(8) .directions_box {
-			span.top {
-				top: 10px;
-				left: 8px;
-				border-top: 8px solid @redColor;
-				width: 20%;
-			}
-			span.left {
-				top: 17px;
-				left: 8px;
-				right: 0;
-				bottom: 0;
-				border-left: 8px solid @redColor;
 				height: 20%;
-				transform: rotateX(180deg);
-			}
-			span.right {
-				right: 8px;
-				bottom: 17px;
-				border-left: 8px solid @redColor;
-				height: 20%;
-				transform: rotateX(180deg);
-			}
-			span.bottom {
-				right: 8px;
-				bottom: 10px;
-				border-bottom: 8px solid @redColor;
-				width: 20%;
-			}
-		}
-		&:nth-child(3) .directions_box, &:nth-child(5) .directions_box {
-			span.top {
-				top: 10px;
-				left: 8px;
-				border-top: 8px solid @blueColor;
-				width: 20%;
-			}
-			span.left {
-				top: 17px;
-				left: 8px;
-				right: 0;
-				bottom: 0;
-				border-left: 8px solid @blueColor;
-				height: 20%;
-				transform: rotateX(180deg);
-			}
-			span.right {
-				right: 8px;
-				bottom: 17px;
-				border-left: 8px solid @blueColor;
-				height: 20%;
-				transform: rotateX(180deg);
-			}
-			span.bottom {
-				right: 8px;
-				bottom: 10px;
-				border-bottom: 8px solid @blueColor;
-				width: 20%;
+				transform: rotate(180deg);
 			}
 		}
 		&:nth-child(1) .directions_box::before {
@@ -191,13 +115,13 @@
 			transition: all .3s ease;
 		}
 		&:nth-child(1) .directions_name, &:nth-child(6) .directions_name, &:nth-child(7) .directions_name {
-			background-color: @yellowColor;
+			background-color: rgba(@yellowColor, .9);
 		}
 		&:nth-child(2) .directions_name, &:nth-child(4) .directions_name, &:nth-child(8) .directions_name {
-			background-color: @redColor;
+			background-color: rgba(@redColor, .9);
 		}
 		&:nth-child(3) .directions_name, &:nth-child(5) .directions_name, &:nth-child(9) .directions_name {
-			background-color: @blueColor;
+			background-color: rgba(@blueColor, .9);
 		}
 		.directions_image {
 			transition: all .4s ease;
