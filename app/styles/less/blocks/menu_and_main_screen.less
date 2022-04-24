@@ -175,17 +175,24 @@
 	}
 }
 .form_title {
-	font-size: 55px;
-	line-height: 1.6;
+	font-size: 60px;
+	line-height: 1.2;
 	text-align: center;
 	margin-left: 140px;
 	margin-right: 20px;
 	margin-bottom: 0;
+	font-family: 'Paper', serif;
+	text-transform: uppercase;
+	letter-spacing: .02em;
 }
 .form_signup {
-	background: rgba(@blueColor, .3);
+	// background: rgba(#969696, .189);
+	// background: rgba(@redColor, .09);
+	background: rgba(@blueColor, .1);
     padding: 65px 60px;
-    box-shadow: 8px 8px 70px 0px @shadowFormColor;
+    // box-shadow: 15px 10px 100px 40px rgb(96 96 96 / 15%);
+    // box-shadow: 15px 10px 100px 40px rgba(@redColor, .1);
+    box-shadow: 15px 10px 100px 40px rgba(@blueColor, .12);
     border-radius: 5px;
     form {
     	display: flex;
@@ -197,21 +204,27 @@
     	height: 50px;
 	    margin-bottom: 30px;
 	    padding: 0 15px;
-	    color: #000;
+	    color: @textColor;
 	    font-size: 16px;
 	    background-color: #ffffff !important;
 	    border-radius: 5px;
-	    border: 2px solid rgba(@blueColor, .6);
+	    // border: 2px solid rgba(@textColor, .17);
+	    border: 2px solid rgba(@blueColor, .17);
     }
+    .form_btn:hover .text_btn {
+		color: #e5f8fe;
+	}
 }
 
 .btn_svg2 {
 	max-width: 315px;
 	height: 75px;
-	fill: @yellowColor;
+	// fill: rgba(@redColor, .2);
+	fill: rgba(@blueColor, .2);
 	transition: all 0.3s ease;
 	&:hover {
-		fill: @redColor;
+		// fill: rgba(@redColor, .82);
+		fill: rgba(@blueColor, .82);
 	}
 }
 
@@ -267,86 +280,54 @@
 			animation: flask_animation_blue 20s infinite linear;
 		}
 	}
-	.shapes2 {
-		background-image: url(../images/dist/main_screen/shapes1.png);
+	.shapes1 {
+		// background-image: url(../images/dist/main_screen/shapes1.png);
 		background-clip: border-box;
 		background-origin: border-box;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
-		height: 200px;
-		width: 150px;
+		height: 35%;
+		width: 20%;
 		right: 0;
+		bottom: 5%;
+		transform: rotate(20deg);
 	}
-	.shapes3 {
-		background-image: url(../images/dist/main_screen/shapes3.png);
+	.shapes2 {
 		background-clip: border-box;
 		background-origin: border-box;
 		background-repeat: no-repeat;
-		background-position: top top;
+		background-position: center;
 		background-size: contain;
-		height: 250px;
-		width: 300px;
-		right: 13%;
-		bottom: -5%;
-	}
-	.shapes4 {
-		background-image: url(../images/dist/main_screen/shapes4.png);
-		background-clip: border-box;
-		background-origin: border-box;
-		background-repeat: no-repeat;
-		background-position: top top;
-		background-size: contain;
-		height: 150px;
-		width: 105px;
-		bottom: -10%;
-		right: 5%;
-		transform: rotate(-70deg);
-	}
-	.shapes6 {
-		height: 70px;
-		width: 70px;
-		background-color: @blueColor;
-		top: 5%;
-		left: 23%;
-		border-radius: 100%;
-		animation: animationOne 20s infinite linear;
-	}
-	.shapes7 {
-		height: 40px;
-		width: 40px;
-		background-color: @redColor;
-		// bottom: -5%;
-		// right: 53%;
-		right: 36%;
-		bottom: 58%;
-		border-radius: 100%;
-		animation: animationTwo 17s infinite linear;
+		// height: 20%;
+		width: 25%;
+		left: 30%;
+		top: -1px;
 	}
 }
 
-@keyframes animationOne {
-	0% {
-	    transform: scale(1.3, 1.3);
-	}
-	50% {
-		transform: scale(1, 1);
-	}
-	100% {
-	    transform: scale(1.3, 1.3);
-	}
-}
-@keyframes animationTwo {
-	0% {
-	    transform: scale(1.4, 1.4);
-	}
-	50% {
-		transform: scale(1, 1);
-	}
-	100% {
-	    transform: scale(1.4, 1.4);
-	}
-}
+// @keyframes animationOne {
+// 	0% {
+// 	    transform: scale(1.3, 1.3);
+// 	}
+// 	50% {
+// 		transform: scale(1, 1);
+// 	}
+// 	100% {
+// 	    transform: scale(1.3, 1.3);
+// 	}
+// }
+// @keyframes animationTwo {
+// 	0% {
+// 	    transform: scale(1.4, 1.4);
+// 	}
+// 	50% {
+// 		transform: scale(1, 1);
+// 	}
+// 	100% {
+// 	    transform: scale(1.4, 1.4);
+// 	}
+// }
 
 @keyframes flask_animation_yellow {
 	0% {
@@ -393,7 +374,38 @@
 
 
 @media screen and (max-width: 991px) {
-	.news_bar {
+	.news_bar,  .menu_wrapper{
 		display: none;
+	}
+	.main_screen_wrap {
+		margin: 0;
+	}
+	.form_title {
+	    font-size: 45px;
+		margin: 0;
+		margin-top: 4rem;
+		margin-bottom: 1rem;
+	}
+	.main_content .shapes2 {
+		left: 10%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.form_title {
+	    font-size: 36px;
+		margin: 0;
+		margin-top: 2rem;
+	}
+}
+@media screen and (max-width: 575px) {
+	.form_title {
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+	}
+	.main_content .shape_flask {
+		display: none;
+	}
+	.form_signup {
+		padding: 2rem .5rem;
 	}
 }

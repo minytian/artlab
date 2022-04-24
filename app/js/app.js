@@ -34,13 +34,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  let findAlphabet = document.querySelector('.title_font');
+  let form_title_color = document.querySelector('.form_title');
+  // let form_title_text = form_title_color.innerHTML;
+  form_title_color.innerHTML = `СТУ<span class="blueColor">Д</span>И<span class="redColor">Я</span> РИС<span class="yellowColor">О</span>ВаНИ<span class="blueColor">Я</span> <span class="yellowColor">Д</span>Л<span class="blueColor">Я</span> <span class="redColor">Д</span>ЕТЕЙ И ВЗР<span class="yellowColor">О</span>СЛЫХ`
 
-  function fundElem (str) {
-    const el = ["а", "о", "д"]
-  }
+//   for(let i = 0; i < form_title_text.length; i++) {
+//     let art = form_title_text[i];
 
-  console.log(findAlphabet)
+//     if (art === 'д') {
+//       // art.style.color = "#ffffff";
+//       form_title_color.innerHTML = "<span>д</span"
+
+// // console.log(art)
+//     } 
+//     if (art === 'о') {
+//       // art.style.color = "#ffffff";
+//     }
+//     if (art === 'я') {
+//       // art.style.color = "#ffffff";
+//     } 
+//   }
 
 })
 
@@ -73,3 +86,5 @@ function modal_close (event) {
   modalOverlay.classList.remove("active")
   modalContent.classList.remove("active")
 }
+
+
